@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=devices-width,intial-scale=1.0">
+        <title>Portfolio</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel ="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div id="contact-header">
+     <div class="containeer">
+      <nav>
+    
+        <a href="portfolio.html">
+            <img src="images/logo.png" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="portfolio.html" >Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="hobbies.html" >Hobbies</a></li>
+            <li><a href="Contact.html"class="active">Contact</a></li>    
+    
+    
+        </ul>
+      </nav>
+<body>
+
+<section id="contact">
+    <div class="container">
+        <h1>Contact Information</h1>
+        <p>If you have any questions, feel free to reach out to me via the form below or use the contact details provided.</p>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p><strong>Phone:</strong> <a href="tel:+94777299793">077 729 9793</a></p>
+            <p><strong>Email:</strong> <a href="mailto:dinithiviranda9@gmail.com">dinithiviranda9@gmail.com</a></p>
+        </div>
+        <h1>Contact Me</h1>
+        <p>If you have any questions, feel free to reach out to me via the form below. I look forward to connecting!</p>
+        
+        <form id="contactForm" action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required minlength="3" maxlength="50">
+                <span class="error" id="nameError">Please enter your name (3-50 characters).</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required maxlength="100">
+                <span class="error" id="subjectError">Please enter a subject (up to 100 characters).</span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required minlength="10"></textarea>
+                <span class="error" id="messageError">Please enter your message (at least 10 characters).</span>
+            </div>
+            <button type="submit">Send Message</button>
+            <p class="success" id="successMessage">Your message has been sent successfully!</p>
+        </form>
+    </div>
+</section>
+<footer>
+    <div class="footer-content">
+        <div class="footer-brand">
+            <img src="images/logo.png" class="footer-logo" alt="Logo">
+            <h3 class="footer-name">Dinithi Viranda</h3>
+        </div>
+        <div class="footer-contact">
+            <p>Email: <a href="mailto:dinithiviranda9@gmail.com">dinithiviranda9@gmail.com</a></p>
+            <p>Phone: <a href="tel:+94777299793">+94 777-299 793</a></p>
+        </div>
+        <div class="footer-links">
+            <a href="portfolio.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="hobbies.html">Hobbies</a> |
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Dinithi Viranda. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,598 @@
+/*  Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #080808;
+    color: #fff;
+}
+
+/* Header Styles */
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background_image.jpg);
+    background-color: #080808; /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 1s ease-in; /* Apply fade in effect */
+
+    
+}
+
+
+
+#about-header {
+    width: 100%;
+    height: 100vh;
+    background: #080808; 
+}
+
+
+.container {
+    padding: 10px 10%;
+}
+/* Navigation Styles */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+}
+
+nav ul {
+    display: inline;/* Inline navigation items */
+}
+
+nav ul li {
+    list-style: none;/* Removing default list styles */
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;/* Removing underline */
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #0055ff;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #0055ff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;/* Smooth color transition */
+}
+
+/* User action pseudo class */
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 3%;
+    padding: 5px 5%;
+}
+
+.header-text h1 {
+    font-size: 70px;
+}
+
+.header-text h1 span {
+    color: #0349d4;
+}
+.intro-text {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 20px 0;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    width: 40px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid #0055ff;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+
+}
+
+.social-media a:hover {
+    background: #0055ff;
+    color: #000000;
+}
+
+.btn{
+    display:inline-block;
+    padding: 12px 28px;
+    background: #0349d4;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #fff;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+
+
+}
+
+
+
+
+
+/*About */
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.about img {
+    border: 2px solid #0349d4;
+    box-shadow: 0 0 5px #0349d4, 0 0 25px #0349d4;
+    height: 550px;
+    width: 350px;
+    border-radius: 5em;            
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for scale and opacity */
+    animation: fadeIn 1s ease; /* Apply fade-in  */
+    opacity: 3; /* Start hidden */
+}
+
+
+.about img.loaded {
+    opacity: 1; /* Fully visible when loaded */
+}
+
+/* Scale the image on hover */
+.about img:hover {
+    transform: scale(1.1); /* Increase size to 110% */
+}
+
+
+.main{
+    width: 1200px;
+    max-width:95%;
+    margin:0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+.about-text h1{
+
+    color: #ffffff;
+    font-size: 80px;
+    text-transform: capitalize;
+    padding: 5px 10%;
+
+}    
+
+.about-text h5{
+    color:#0349d4;
+    font-size: 28px;
+    text-transform: 25px;
+    margin-bottom: 0.4em;
+    padding: 10px 10%;
+}
+span{
+    color: #ffffff;
+}
+
+.about-text p{
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+    padding: 10px 10%;
+}
+
+
+/* hobbies Section */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #080808;
+    color: #fff;
+}
+
+.back-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: sticky; /* Make the navigation sticky */
+    top: 0; /* Stick it to the top */
+    background: #080808; /* Background color to separate it from the content */
+    z-index: 1000; /* Ensure it stays above other elements */
+    padding: 10px 10%; /* Add padding for better appearance */
+    transition:  0.3s ease; /* Optional: Smooth transition for background color */
+}
+
+
+.logo {
+    width: 180px;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.myskill {
+    padding: -20rem 0;
+    color: #fff;
+    text-align:center;
+    padding :60px;
+    
+}
+
+.myskill h1 {
+    font-size: 60px;
+    color: #0349d4;
+    height: 100px;
+    text-align:center;
+    
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    
+}
+
+.service {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;/* Smooth transition for the effect */
+}
+
+.service:hover {
+    transform: translateY(-5px);/* Move the element up on hover */
+}
+
+.service h3 {
+    color: #0349d4;
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    color: #555;
+}
+
+footer {
+    background: #080808;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #0055ff;
+}
+
+.footer-name {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/*contact*/
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+   
+}
+
+#contact {
+    background: linear-gradient(to right, #000000, #031f5c); /* Gradient background */
+    animation: fadeIn 1s ease-in; /* Apply fade in effect */
+}
+
+#contact h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #0055ff;
+}
+
+#contact p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+}
+
+form {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 10px;/* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: #0055ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;/* Smooth transition for hover */
+}
+
+button[type="submit"]:hover {
+    background: #003bbf;
+}
+
+/* Error Messages */
+.error {
+    display: none;
+    font-size: 14px;
+    color: #ff4d4d;
+    margin-top: 5px;
+}
+
+/* Success Message */
+.success {
+    display: none;
+    font-size: 16px;
+    color: #4dff88;
+    margin-top: 15px;
+}
+
+/* Animation */
+input:invalid,
+textarea:invalid {
+    border-color: #0349d4;
+}
+
+/* Pseudo Classes and Selectors */
+input:valid,
+textarea:valid {
+    border-color: #4dff88;
+}
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-branding,
+    .nav-links,
+    .nav-contact {
+        text-align: center;
+        margin: 1rem 0;
+    }
+}
+
+/* Child Combinator */
+nav > ul > li {
+    margin-right: 20px; /* Margin for direct children */
+}
+
+/* Nth Pseudo Class */
+nav ul li:nth-child(1) {
+    font-weight: bold; /* Bold style for the second navigation item */
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .card__container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    
+    
+    .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+    
+
+footer {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    padding: 0.5rem 0;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.footer-logo {
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-name {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: #0077be;
+}
+
+.footer-bottom {
+    font-size: 0.7rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.footer-contact span,
+.footer-links a {
+    margin: 0 0.3rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block; /* Stack navigation items on small screens */
+        margin-bottom: 10px; /* Margin below each item */
+    }
+    
+    aside {
+        margin: 20px 0; /* Margin above and below aside */
+    }
+    
+    main {
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+}
